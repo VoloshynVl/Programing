@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+#define MAX_SIZE 100
+
+int main() {
+    // Оголошення матриці та змінних
+    int matrix[MAX_SIZE][MAX_SIZE];
+    int rows, cols;
+
+    // Введення кількості рядків та стовпців
+    printf("Введіть кількість рядків: ");
+    scanf("%d", &rows);
+    printf("Введіть кількість стовпців: ");
+    scanf("%d", &cols);
+
+    // Введення елементів матриці 
+    printf("Введіть елементи матриці:\n");
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+
+    // Обмін елементів першого рядка та останнього стовпця
+    for (int i = 0; i < cols; ++i) {
+        int temp = matrix[0][i];
+        matrix[0][i] = matrix[i][cols - 1];
+        matrix[i][cols - 1] = temp;
+    }
+
+    // Виведення зміненої матриці(шо-то з інету)
+    printf("Матриця після обміну:\n");
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

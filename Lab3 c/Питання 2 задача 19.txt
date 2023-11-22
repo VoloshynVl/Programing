@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x, y, result;
+
+    // Введення дійсних значень x та y користувачем
+    printf("Введіть x: ");
+    scanf("%lf", &x);
+    printf("Введіть y: ");
+    scanf("%lf", &y);
+
+    // Обчислення 
+    result = sqrt(x + y) / (pow(x, 2) - pow(y, 2) + 5);
+
+    // Виведення результату
+    printf("Результат: %lf\n", result);
+
+    return 0;
+}

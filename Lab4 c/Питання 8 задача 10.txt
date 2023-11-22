@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n; // Натуральне число
+    double x; // Число x
+    int count = 0; // Лічильник зустрічень x
+
+    // Введення кількості елементів та числа x
+    printf("Введіть кількість елементів (n): ");
+    scanf("%d", &n);
+    printf("Введіть число x: ");
+    scanf("%lf", &x);
+
+    double currentSum = 0; // Поточна сума для обчислення cos
+
+    // Введення дійсних чисел та обчислення косинусів сум
+    for (int i = 1; i <= n; ++i) {
+        double ai;
+        printf("Введіть елемент a%d: ", i);
+        scanf("%lf", &ai);
+        currentSum += ai;
+        double cosValue = cos(currentSum);
+
+        // Порівняння з числом x
+        if (cosValue == x) {
+            count++;
+        }
+    }
+
+    // Виведення результату
+    printf("Кількість зустрічей х в послідовності: %d\n", count);
+
+    return 0;
+}

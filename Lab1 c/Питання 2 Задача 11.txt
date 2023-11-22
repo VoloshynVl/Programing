@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    double yarda, kilometr;
+    
+    printf("Введіть зріст у ярдах: ");
+    scanf("%lf", &yarda); // Інпут, зміна <<yarda>>
+
+    kilometr = yarda * 0.0009144; // формула щоб перевести в кілометри 
+    
+    printf("Зріст у кілометрах: %lf\n", kilometr); // Вивод на екран зміної <<kilometr>>
+    
+    return 0;
+}

@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// Структура для збереження інформації про людину
+struct ZNAK {
+    char firstName[50];
+    char lastName[50];
+    char zodiacSign[20];
+    int birthDate[3]; // масив з трьох чисел для дати народження (день, місяць, рік)
+};
+
+int main() {
+    struct ZNAK person;
+
+    // Введення даних для однієї людини
+    printf("Прізвище, ім'я: ");
+    scanf("%s %s", person.lastName, person.firstName);
+    
+    printf("Знак Зодіаку: ");
+    scanf("%s", person.zodiacSign);
+
+    printf("Дата народження (день місяць рік): ");
+    scanf("%d %d %d", &person.birthDate[0], &person.birthDate[1], &person.birthDate[2]);
+
+    // Виведення введених даних
+    printf("\nВведені дані:\n");
+    printf("Прізвище, ім'я: %s %s\n", person.lastName, person.firstName);
+    printf("Знак Зодіаку: %s\n", person.zodiacSign);
+    printf("Дата народження: %02d.%02d.%d\n", person.birthDate[0], person.birthDate[1], person.birthDate[2]);
+
+    return 0;
+}

@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main() {
+    // Кількість чисел
+    int n = 50;
+
+    // Масив для збереження чисел
+    int numbers[n];
+
+    // Введення чисел
+    printf("Введіть %d чисел:\n", n);
+    for (int i = 0; i < n; ++i) {
+        scanf("%d", &numbers[i]);
+    }
+
+    // Останнє число
+    int lastNumber = numbers[n - 1];
+
+    // Підрахунок кількості чисел, що відмінні від останнього
+    int differentCount = 0;
+    for (int i = 0; i < n - 1; ++i) {
+        if (numbers[i] != lastNumber) {
+            differentCount++;
+        }#include <stdio.h>
+
+int main() {
+    // Кількість чисел
+    int n = 50;
+
+    // Масив для збереження чисел
+    int numbers[n];
+
+    // Введення чисел з клаваіатури
+    printf("Введіть %d чисел:\n", n);
+    for (int i = 0; i < n; ++i) {
+        scanf("%d", &numbers[i]);
+    }
+
+    // Останнє число
+    int lastNumber = numbers[n - 1];
+
+    // Підрахунок кількості чисел, що відмінні від останнього
+    int differentCount = 0;
+    for (int i = 0; i < n - 1; ++i) {
+        if (numbers[i] != lastNumber) {
+            differentCount++;
+        }
+    }
+
+    // Виведення результату
+    printf("Кількість чисел, що відмінні від останнього: %d\n", differentCount);
+
+    return 0;
+}
+
+    }
+
+    // Виведення результату
+    printf("Кількість чисел, що відмінні від останнього: %d\n", differentCount);
+
+    return 0;
+}

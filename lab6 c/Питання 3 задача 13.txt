@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int p;
+    printf("Введіть натуральне число p: ");
+    scanf("%d", &p);
+
+    // масив для послідовності
+    double sequence[p];
+
+    // Введення послідовності з клавіатури
+    printf("Введіть %d чисел:\n", p);
+    for (int i = 0; i < p; ++i) {
+        scanf("%lf", &sequence[i]);
+    }
+
+    // Підрахунок кількості груп
+    int groups = 1; // Початкова кількість груп
+    for (int i = 1; i < p; ++i) {
+        // Порівняння поточного та попереднього елементів
+        if (sequence[i] != sequence[i - 1]) {
+            groups++;
+        }
+    }
+    printf("Кількість груп послідовності: %d\n", groups);
+
+    return 0;
+}

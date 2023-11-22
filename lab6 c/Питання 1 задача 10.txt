@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <math.h>
+
+// Функція для обчислення значення многочлена P(x)
+double computePolynomial(double coefficients[], int degree, double x) {
+    double result = 0.0;
+
+    for (int i = 0; i <= degree; ++i) {
+        result += coefficients[i] * pow(x, degree - i);
+    }
+
+    return result;
+}
+
+int main() {
+    int degree;
+    printf("Введіть ступінь многочлена: ");
+    scanf("%d", &degree);
+
+    // Ініціалізація коефіцієнтів многочлена
+    double coefficients[degree + 1];
+
+    for (int i = 0; i <= degree; ++i) {
+        printf("Введіть коефіцієнт a%d: ", i);
+        scanf("%lf", &coefficients[i]);
+    }
+
+    double x;
+
+    // Введення точки x
+    printf("Введіть точку x: ");
+    scanf("%lf", &x);
+
+    // Обчислення значення многочлена P(x) за допомогою масиву
+    double result = computePolynomial(coefficients, degree, x);
+
+    // Виведення результату
+    printf("Значення многочлена P(x) в точці %.2lf: %.2lf\n", x, result);
+
+    return 0;
+}

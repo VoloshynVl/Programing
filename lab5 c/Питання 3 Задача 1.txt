@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr1, *ptr2;
+
+    // Виділення динамічної пам'яті 
+    ptr1 = (int*)malloc(sizeof(int));
+    ptr2 = (int*)malloc(sizeof(int));
+
+    if (ptr1 == NULL || ptr2 == NULL) {
+        printf("Помилка виділення пам'яті.\n");
+        return 1;
+    }
+
+    // Введення значень з клавіатури
+    printf("Введіть значення для першої змінної: ");
+    scanf("%d", ptr1);
+
+    printf("Введіть значення для другої змінної: ");
+    scanf("%d", ptr2);
+
+    *ptr1 /= 2;
+
+    printf("Значення першої змінної після зменшення вдвічі: %d\n", *ptr1);
+    printf("Значення другої змінної: %d\n", *ptr2);
+
+    // Звільненя пам
+    free(ptr1);
+    free(ptr2);
+
+    return 0;
+}

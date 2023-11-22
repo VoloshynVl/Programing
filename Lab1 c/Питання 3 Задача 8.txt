@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    double A, B, H;
+    double perimeter, area;
+
+    printf("Введіть довжину сторони A (A > B): "); //Вивод на екран + задання змін
+    scanf("%lf", &A);
+    printf("Введіть довжину сторони B: ");
+    scanf("%lf", &B);
+    printf("Введіть висоту H: ");
+    scanf("%lf", &H);
+
+    perimeter = 4 * A + 2 * B; // Формули 
+    area = 2 * (A * B + A * H + B * H);
+
+    printf("Периметр паралелепіпеда: %lf\n", perimeter); //Вивод периметра
+    printf("Площа паралелепіпеда: %lf\n", area); //Вивод площі
+    return 0;
+}

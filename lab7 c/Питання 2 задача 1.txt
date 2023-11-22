@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int countSentences(const char *text) {
+    int sentenceCount = 0; //Змінна, ініціалізанія нулем
+    int textLength = strlen(text); // Визначення довжини
+
+    for (int i = 0; i < textLength; i++) { //проходка по кожному окремому символу 
+        // Перевіряємо кожен символ на те, чи це розділовий знак речення
+        if (text[i] == '.' || text[i] == '?' || text[i] == '!') {
+            sentenceCount++;
+        }
+    }
+
+    return sentenceCount;
+}
+
+int main() {
+    char inputText[1000];  // Задання розміру тексту
+
+    // Зчитуємо введений текст
+    printf("Введіть текст: ");
+    fgets(inputText, sizeof(inputText), stdin);
+
+    // Викликаємо функцію для підрахунку речень
+    int sentences = countSentences(inputText);
+
+    // Виводимо результат
+    printf("Кількість речень у тексті: %d\n", sentences);
+
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int n = 50; // Кількість рядів
+    int sum = 0; // Загальна сума
+
+    for (int i = 2; i <= n; ++i) {
+        // i = 2 тому що (1 + і(2) = 3( перший ряд) )
+        int currentRowSum = i * (i + 1) / 2;
+        sum += currentRowSum; //Сума всіх рядів
+    }
+
+    printf("Результат: %d\n", sum);
+
+    return 0;
+}

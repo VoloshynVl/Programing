@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int n; // Натуральне число
+    double sum = 0; // Сума
+    
+    printf("Введіть натуральне числоа (n): ");
+    scanf("%d", &n);
+
+    // Введення чисел і обчислення суми
+    for (int i = 1; i <= n; ++i) {
+        double element;
+        printf("Введіть число a%d: ", i);
+        scanf("%lf", &element);
+        sum += element;
+    }
+    printf("Сума чисел: %.2lf\n", sum);
+
+    return 0;
+}

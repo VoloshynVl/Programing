@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+void reversePrint(char *str) {
+    int length = strlen(str); // визначаємо довжину рядка
+    // використовуючи ф-цію strlen
+    
+    for (int i = length - 1; i >= 0; i--) { 
+        // Цикл, який проходить від останнього символу до першого
+        // - 1 оскількийпочинається з нуля
+        printf("%c", str[i]); // %с вказуэ на те що ми виводимо символ
+    }
+    printf("\n");
+}
+
+int main() {
+    char inputText[1000];  // Задання розміру
+    
+    // Зчитуємо введений текст
+    printf("Введіть текст: ");
+    fgets(inputText, sizeof(inputText), stdin);
+
+    // Викликаємо функцію для виведення тексту з кінця до початку
+    reversePrint(inputText);
+
+    return 0;
+}

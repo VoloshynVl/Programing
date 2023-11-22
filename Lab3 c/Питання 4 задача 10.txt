@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    double a, b, c, x, result;
+
+    // Введення значень
+    printf("Введіть значення a: ");
+    scanf("%lf", &a);
+    printf("Введіть значення b: ");
+    scanf("%lf", &b);
+    printf("Введіть значення c: ");
+    scanf("%lf", &c);
+    printf("Введіть значення x: ");
+    scanf("%lf", &x);
+
+    // Ф-ли відповідно за умов
+    if (x < 3 && b != 0) {
+        result = a * x * x - b * x + c;
+    } else if (x > 3 && b == 0) {
+        result = (x - a) / (x - c);
+    } else {
+        result = x / c;
+    }
+    printf("Результат: %lf\n", result);
+
+    return 0;
+}

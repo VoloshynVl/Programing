@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    double total_marks, max_marks;
+    printf("Введіть сумарний бал учня: ");
+    scanf("%lf", &total_marks);
+    printf("Введіть максимальний бал якій може бути в оцінювані: "); 
+    // Визначаємо максимальний бал щоб могли знати відносне значення.
+    scanf("%lf", &max_marks);
+
+    double percent = (total_marks / max_marks) * 100; 
+    // Сама формула, де бал учня ділимо на максимальний бал щоб визначити відношення сумарного бала.
+    // Множимо на 100 щоб отримати відсоткове значення. 
+    int grade;
+
+    if (percent >= 92) {
+        grade = 12;
+    } else if (percent >= 70) {
+        grade = 8;
+    } else if (percent >= 50) {
+        grade = 5;
+    } else {
+        grade = 2;
+    }
+    //Якщо більше дорівнює 92-ум тоді оцінка 12
+
+    printf("Оцінка учня: %d\n", grade);
+
+    return 0;
+}
